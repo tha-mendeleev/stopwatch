@@ -14,6 +14,7 @@ class Timer {
     this.hour = 0;
   }
   update(deltatime) {
+    
     if (this.ms >= 1000) {
       this.ms = 0;
       this.ss++;
@@ -21,11 +22,13 @@ class Timer {
 
     if (this.ss >= 60) {
       this.ss = 0;
+      this.ms = 0;
       this.mm++;
     }
 
     if (this.mm >= 60) {
       this.mm = 0;
+      this.ss = 0;
       this.hour++;
     }    
     timer.innerHTML = formar2digit(this.hour) + ":" + formar2digit(this.mm) + ":" + formar2digit(this.ss);
