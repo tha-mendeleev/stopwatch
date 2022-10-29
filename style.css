@@ -26,17 +26,18 @@ body{
 .time-wrapper{
     position: relative;
     margin-bottom: 2rem;
+    font-size: 1rem;
 }
 
 .timer {
-    font-size: 6em;
+    font-size: 12em;
     color:rgb(210, 255, 247);
 }
 
 .ms{
     position: absolute;
-    right: 1rem;
-    font-size: 1.75rem;
+    right: 10%;
+    font-size: 4em;
     color:rgb(63, 235, 54)
 }
 
@@ -63,6 +64,7 @@ body{
     color:rgb(0, 0, 0);
     scale: 1.05;
 }
+
 .btn:active{
     color:rgb(255, 255, 255);
     scale: 1;
@@ -71,10 +73,18 @@ body{
 .btn-start {
     background-color: rgb(63, 235, 54);
 }
+
 .btn-pause {
     background-color: rgb(255, 174, 35);
 }
+
 .btn-progress {
     background-color: rgb(202, 199, 0);
 
+}
+
+@media (max-width: 700px) {
+    .time-wrapper {
+        font-size: .5rem;
+    }
 }
