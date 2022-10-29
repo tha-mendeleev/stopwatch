@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Motivational Stop Watch</title>
+</head>
+<body>
+    <div class="stop-watch">
+        <div class="time-wrapper">
+            <div class="timer time" id="timer">00:00:00</div>
+            <div class="timer ms" id="mst">0</div>
+        </div>
+        <div class="action">
+            <div class="btn btn-start" id = "start" onclick="startTimer()">Start</div>
+            <div class="btn btn-pause" id = "pause" onclick="pause()">Pause</div>
+            <div class="btn btn-progress" onclick="clearTimer()">Clear</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
