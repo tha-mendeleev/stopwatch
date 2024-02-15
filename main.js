@@ -31,7 +31,7 @@ class Timer {
       this.ss = 0;
       this.hour++;
     }    
-    timer.innerHTML = formar2digit(this.hour) + ":" + formar2digit(this.mm) + ":" + formar2digit(this.ss);
+    timer.innerHTML = format2digit(this.hour) + ":" + format2digit(this.mm) + ":" + format2digit(this.ss);
     mst.innerHTML = (this.ms/10).toFixed();
   }
 
@@ -42,7 +42,7 @@ class Timer {
     this.hour = 0;
     started = false;
     paused = false;
-    timer.innerHTML = formar2digit(this.hour) + ":" + formar2digit(this.mm) + ":" + formar2digit(this.ss);
+    timer.innerHTML = format2digit(this.hour) + ":" + format2digit(this.mm) + ":" + format2digit(this.ss);
     mst.innerHTML = this.ms.toFixed()/10
   }
 }
@@ -83,11 +83,6 @@ function startTimer() {
   }
 }
 
-function formar2digit(num, digit = 2) {
-  var nums = num + ""
-  let zeros = ""
-  for(let i = nums.length; i < digit; i++) {
-    zeros+="0"
-  }
-  return zeros+num
+function format2digit(num, digit = 2) {
+  return num.toString().padStart(digit, '0');
 }
